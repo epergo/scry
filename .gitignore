@@ -7,3 +7,5 @@
 *.out
 build/
 linux_build.sh
+bin/ameba
+shard.lock

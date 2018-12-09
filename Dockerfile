@@ -6,4 +6,6 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN mkdir -p /root/.cache/crystal
 
+RUN shards install
+
 ADD . /opt/scry

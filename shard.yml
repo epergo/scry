@@ -9,3 +9,7 @@ license: MIT
 targets:
   scry:
     main: src/scry.cr
+
+development_dependencies:
+  ameba:
+    github: veelenga/ameba

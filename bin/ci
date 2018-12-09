@@ -60,6 +60,7 @@ on_both() {
 build() {
   with_build_env 'crystal spec --error-trace --stats --progress --no-debug'
   with_build_env 'crystal tool format src spec/scry --check'
+  with_build_env 'bin/ameba --silent'
 }
 
 prepare_build() {
@@ -67,6 +68,7 @@ prepare_build() {
 
   on_osx brew update
   on_osx brew install crystal-lang
+  on_osx shards install
 }
 
 
@@ -89,7 +91,6 @@ with_build_env() {
 
 
   on_osx /bin/sh -c "'$command'"
-
 }
 
 usage() {
